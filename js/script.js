@@ -1,5 +1,4 @@
 // ==================== CONFIGURATION ====================
-// YOUR GOOGLE SCRIPT WEB APP URL
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwThYhN8-ZT_BsUwklbJoAaI8VXUbxLYTtIqH_j6cYkUOgdcQw-pQqHXPvySREI68ntxA/exec'; 
 
 // ==================== LANGUAGE SWITCHER ====================
@@ -57,7 +56,6 @@ const bookingButtons = document.querySelectorAll('.book-trigger');
 const bookingForm = document.getElementById('bookingForm');
 const spinner = document.getElementById('spinner');
 
-// Open Modal
 bookingButtons.forEach(btn => {
     btn.addEventListener('click', function() {
         const serviceName = this.closest('.service-ticket').querySelector('.ticket-category').textContent;
@@ -66,32 +64,15 @@ bookingButtons.forEach(btn => {
     });
 });
 
-// Close Modal
-closeBtn.addEventListener('click', () => {
-    modal.classList.remove('active');
-});
+closeBtn.addEventListener('click', () => { modal.classList.remove('active'); });
+window.addEventListener('click', (e) => { if (e.target == modal) modal.classList.remove('active'); });
 
-window.addEventListener('click', (e) => {
-    if (e.target == modal) {
-        modal.classList.remove('active');
-    }
-});
-
-// Handle Form Submission to Google Sheets
 bookingForm.addEventListener('submit', function(e) {
     e.preventDefault();
-    
-    // Show loading state
     spinner.style.display = 'inline';
-    
-    // Prepare data
     const formData = new FormData(this);
     
-    // Send to Google Sheets
-    fetch(GOOGLE_SCRIPT_URL, {
-        method: 'POST',
-        body: formData
-    })
+    fetch(GOOGLE_SCRIPT_URL, { method: 'POST', body: formData })
     .then(response => {
         alert("Thank you! Your booking request has been sent.");
         modal.classList.remove('active');
@@ -111,8 +92,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         const targetSection = document.querySelector(targetId);
-        if (targetSection) {
-            targetSection.scrollIntoView({ behavior: 'smooth' });
-        }
+        if (targetSection) targetSection.scrollIntoView({ behavior: 'smooth' });
     });
 });
