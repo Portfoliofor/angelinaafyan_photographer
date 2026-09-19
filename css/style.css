@@ -220,7 +220,7 @@ a { text-decoration: none; color: inherit; }
     margin: 25px 0; position: relative;
 }
 .ticket-divider::after {
-    content: '✂'; position: absolute; top: 50%; left: 50%;
+    content: ''; position: absolute; top: 50%; left: 50%;
     transform: translate(-50%, -50%); background: var(--white);
     padding: 0 10px; color: var(--warm-gray); font-size: 1.2rem;
 }
