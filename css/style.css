@@ -346,7 +346,12 @@ a { text-decoration: none; color: inherit; }
         margin-top: 10px; 
         gap: 15px; 
     }
-    .top-bar-center .nav-link { font-size: 0.7rem; letter-spacing: 2px; }
+    /* FIXED: Smaller font + nowrap prevents Armenian words from breaking awkwardly */
+    .top-bar-center .nav-link { 
+        font-size: 0.65rem; 
+        letter-spacing: 1px; 
+        white-space: nowrap; 
+    }
 
     /* 2. Typography Scaling */
     .section-heading { font-size: 2.2rem; margin-bottom: 20px; }
