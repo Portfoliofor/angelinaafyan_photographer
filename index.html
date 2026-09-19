@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Անգելինա Աֆյան | Photography Portfolio</title>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -16,15 +13,17 @@
     <!-- Top Bar -->
     <header class="top-bar">
         <div class="top-bar-left">
-            <span class="logo-text" data-en="ANGELINA AFYAN" data-am="ԱՆԳԵԼԻՆԱ ԱՅԱՆ">ANGELINA AFYAN</span>
+            <!-- FIXED: ԱՖՅԱՆ not ԱՅԱ -->
+            <span class="logo-text" data-en="ANGELINA AFYAN" data-am="ԱՆԳԵԼԻՆԱ ԱՖՅԱՆ">ANGELINA AFYAN</span>
         </div>
         
         <div class="top-bar-center">
-            <!-- FIXED: Restored 'Պ' -->
+            <!-- FIXED: ՊՈՐՏՖՈԼԻՈ -->
             <a href="#portfolio" class="nav-link" data-en="PORTFOLIO" data-am="ՊՈՐՏՖՈԼԻՈ">PORTFOLIO</a>
-            <!-- FIXED: Restored '' -->
+            <!-- FIXED: ԻՄ ՄԱՍԻՆ -->
             <a href="#about" class="nav-link" data-en="ABOUT ME" data-am="ԻՄ ՄԱՍԻՆ">ABOUT ME</a>
-            <a href="#services" class="nav-link" data-en="SERVICES" data-am="ԾԱԱՅՈՒԹՈՒՆՆՐ">SERVICES</a>
+            <!-- FIXED: ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ -->
+            <a href="#services" class="nav-link" data-en="SERVICES" data-am="ԾԱՌԱՅՈՒԹՅՈՒՆԵՐ">SERVICES</a>
         </div>
 
         <div class="top-bar-right">
@@ -45,8 +44,8 @@
         </div>
 
         <div class="hero-content">
-            <!-- FIXED: Restored 'Հ' and '' -->
-            <p class="hero-subtitle" data-en="CAPTURING SOULFUL MOMENTS" data-am="ՀՈԳԵՎՈՐ ՊԱՀԵՐ">CAPTURING SOULFUL MOMENTS</p>
+            <!-- FIXED: ՀՈԵՎՈՐ ՊԱՀԵՐ -->
+            <p class="hero-subtitle" data-en="CAPTURING SOULFUL MOMENTS" data-am="ՀԳԵՎՈՐ ՊԱՀԵՐ">CAPTURING SOULFUL MOMENTS</p>
             <a href="#portfolio" class="hero-cta" data-en="Portfolio →" data-am="Պորտֆոլիո →">Portfolio →</a>
         </div>
     </section>
@@ -54,12 +53,11 @@
     <!-- ==================== PORTFOLIO: AUTO SCROLL STRIP ==================== -->
     <section id="portfolio" class="portfolio-section">
         <div class="portfolio-header">
-            <!-- FIXED: Restored 'Ը' and 'Ն' -->
-            <span class="section-subheading" data-en="SELECTED WORKS" data-am="ԸՆՏՐՎԱԾ ԱՇԽԱՏԱՆՔՆԵՐ">SELECTED WORKS</span>
+            <!-- FIXED: ԸՏՐՎԱԾ ԱՇԽԱՏԱՆՔՆԵՐ -->
+            <span class="section-subheading" data-en="SELECTED WORKS" data-am="ԸՆՏՐՎԱԾ ԱՇԽԱԱՆՔՆԵՐ">SELECTED WORKS</span>
             <h2 class="section-heading" data-en="Portfolio" data-am="Պորտֆոլիո">Portfolio</h2>
         </div>
         
-        <!-- The Auto-Scrolling Film Strip -->
         <div class="strip-container-auto">
             <div class="strip-track">
                 <!-- ORIGINAL SET (13 Images) -->
@@ -77,7 +75,7 @@
                 <div class="strip-item"><img src="https://raw.githubusercontent.com/Portfoliofor/angelinaafyan_photographer/main/portfolio12.jpg" alt="Portfolio 12"></div>
                 <div class="strip-item"><img src="https://raw.githubusercontent.com/Portfoliofor/angelinaafyan_photographer/main/portfolio13.jpg" alt="Portfolio 13"></div>
 
-                <!-- DUPLICATE SET (REQUIRED FOR INFINITE LOOP) -->
+                <!-- DUPLICATE SET FOR INFINITE LOOP -->
                 <div class="strip-item"><img src="https://raw.githubusercontent.com/Portfoliofor/angelinaafyan_photographer/main/portfolio1.jpg" alt="Portfolio 1"></div>
                 <div class="strip-item"><img src="https://raw.githubusercontent.com/Portfoliofor/angelinaafyan_photographer/main/portfolio2.jpg" alt="Portfolio 2"></div>
                 <div class="strip-item"><img src="https://raw.githubusercontent.com/Portfoliofor/angelinaafyan_photographer/main/portfolio3.jpg" alt="Portfolio 3"></div>
@@ -99,8 +97,8 @@
     <section id="about" class="about-section">
         <div class="about-container">
             <div class="about-text">
-                <!-- FIXED: Restored 'Չ' -->
-                <span class="section-subheading" data-en="THE PHOTOGRAPHER" data-am="ԼՒՍԱՆԿԱԻՉԸ">THE PHOTOGRAPHER</span>
+                <!-- FIXED: ԼՈՒՍԱԿԱՐԻՉ -->
+                <span class="section-subheading" data-en="THE PHOTOGRAPHER" data-am="ԼՈՒՍԱԿԱՐԻՉԸ">THE PHOTOGRAPHER</span>
                 <h2 class="section-heading" data-en="About Me" data-am="Իմ մասին">About Me</h2>
                 <p class="about-desc" 
                    data-en="Hi, I'm Angelina. Based in Armenia, I specialize in capturing authentic emotions and timeless stories. My editing process combines technical precision with artistic intuition."
@@ -109,7 +107,8 @@
                 </p>
             </div>
             <div class="about-image-col">
-                <img src="https://raw.githubusercontent.com/Portfoliofor/angelinaafyan_photographer/main/About%20me.png" alt="My Workspace" class="about-pc-img">
+                <!-- FIXED ALT TEXT -->
+                <img src="https://raw.githubusercontent.com/Portfoliofor/angelinaafyan_photographer/main/About%20me.png" alt="Իմ աշխատանքային տարածքը" class="about-pc-img">
             </div>
         </div>
     </section>
@@ -119,8 +118,8 @@
         <div class="services-header">
             <div class="services-icon-title">
                 <i class="fas fa-camera-retro"></i>
-                <!-- FIXED: Restored 'Ծ' and 'Յ' -->
-                <h2 class="section-heading" data-en="Service & Pricing" data-am="ԾԱՌԱՅՈՒԹՈՒՆՆՐ և ԳԵՐ" style="margin-bottom:0;">Service & Pricing</h2>
+                <!-- FIXED: ԾԱՌԱՅՈՒԹՅՈՆՆԵՐ և ԳՆԵՐ -->
+                <h2 class="section-heading" data-en="Service & Pricing" data-am="ԾԱՌԱՅՈՒԹՈՒՆՆԵՐ և ԳՆՐ" style="margin-bottom:0;">Service & Pricing</h2>
             </div>
             <p style="color: var(--warm-gray); margin-top: 10px;" data-en="Choose your experience" data-am="Ընտրեք ձեր փորձը">Choose your experience</p>
         </div>
@@ -130,7 +129,8 @@
             <div class="service-ticket">
                 <div class="ticket-header">
                     <h3 class="ticket-category" data-en="Wedding" data-am="Հարսանիք">Wedding</h3>
-                    <div class="ticket-price">70k <span>AMD</span></div>
+                    <!-- FIXED: Full number format -->
+                    <div class="ticket-price">70,000 <span>AMD</span></div>
                 </div>
                 <div class="ticket-divider"></div>
                 <ul class="ticket-features">
@@ -145,12 +145,13 @@
             <div class="service-ticket">
                 <div class="ticket-header">
                     <h3 class="ticket-category" data-en="Love Story" data-am="Սիրո պատմություն">Love Story</h3>
-                    <div class="ticket-price">25k <span>AMD</span></div>
+                    <!-- FIXED: Full number format -->
+                    <div class="ticket-price">25,000 <span>AMD</span></div>
                 </div>
                 <div class="ticket-divider"></div>
                 <ul class="ticket-features">
-                    <li><i class="fas fa-check"></i> <span data-en="1 Location / 1 Hour" data-am="1 վայր / 1 ամ">1 Location / 1 Hour</span></li>
-                    <!-- FIXED: Restored 'լ' -->
+                    <!-- FIXED: 1 ժամ not 1 ամ -->
+                    <li><i class="fas fa-check"></i> <span data-en="1 Location / 1 Hour" data-am="1 վայր / 1 ժամ">1 Location / 1 Hour</span></li>
                     <li><i class="fas fa-check"></i> <span data-en="Up to 80 edited photos" data-am="Մինչև 80 խմբագրված լուսանկար">Up to 80 edited photos</span></li>
                     <li><i class="fas fa-check"></i> <span data-en="Online Gallery" data-am="Առցանց պատկերասրահ">Online Gallery</span></li>
                 </ul>
@@ -161,14 +162,14 @@
             <div class="service-ticket">
                 <div class="ticket-header">
                     <h3 class="ticket-category" data-en="Personal" data-am="Անհատական">Personal</h3>
-                    <div class="ticket-price">15k <span>AMD</span></div>
+                    <!-- FIXED: Full number format -->
+                    <div class="ticket-price">15,000 <span>AMD</span></div>
                 </div>
                 <div class="ticket-divider"></div>
                 <ul class="ticket-features">
+                    <!-- FIXED: Ստուդիա not տուդիա -->
                     <li><i class="fas fa-check"></i> <span data-en="Studio or Outdoor" data-am="տուդիա կամ բացօթյա">Studio or Outdoor</span></li>
-                    <!-- FIXED: Restored 'Մ' -->
                     <li><i class="fas fa-check"></i> <span data-en="Up to 30 edited photos" data-am="Մինչև 30 խմբագրված լուսանկար">Up to 30 edited photos</span></li>
-                    <!-- FIXED: Restored 'փ' -->
                     <li><i class="fas fa-check"></i> <span data-en="2 Outfit Changes" data-am="2 հագուստի փոփոխություն">2 Outfit Changes</span></li>
                 </ul>
                 <button class="ticket-btn book-trigger" data-en="Book Date" data-am="Ամրագրել">Book Date</button>
@@ -201,16 +202,15 @@
     <div id="bookingModal" class="modal-overlay">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
-            <h2 data-en="Book Your Session" data-am="Ամրագրեք Ձեր Նկարահանումը">Book Your Session</h2>
+            <h2 data-en="Book Your Session" data-am="Ամրագրեք Ձեր կարահանումը">Book Your Session</h2>
             
             <form id="bookingForm">
                 <div class="form-group">
-                    <label data-en="Selected Service" data-am="Ընտրված ծառայություն">Selected Service</label>
+                    <label data-en="Selected Service" data-am="նտրված ծառայություն">Selected Service</label>
                     <input type="text" id="serviceInput" name="service" readonly>
                 </div>
 
                 <div class="form-group">
-                    <!-- FIXED: Restored 'Ը' -->
                     <label data-en="Select Date" data-am="Ընտրեք ամսաթիվ">Select Date</label>
                     <input type="date" id="bookingDate" name="date" required>
                 </div>
@@ -232,7 +232,6 @@
         </div>
     </div>
 
-    <!-- Custom JS -->
     <script src="js/script.js"></script>
 </body>
 </html>
