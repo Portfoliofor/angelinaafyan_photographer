@@ -112,7 +112,6 @@ a { text-decoration: none; color: inherit; }
     border-bottom: 10px solid #111;
 }
 
-/* Sprocket Holes Top/Bottom for Strip */
 .strip-container-auto::before, .strip-container-auto::after {
     content: ''; position: absolute; left: 0; right: 0; height: 30px; z-index: 2;
     background-image: radial-gradient(circle, #fff 8px, transparent 9px);
