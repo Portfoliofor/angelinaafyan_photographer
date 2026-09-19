@@ -126,7 +126,7 @@ a { text-decoration: none; color: inherit; }
     display: flex;
     gap: 20px;
     width: max-content;
-    animation: scrollStrip 35s linear infinite; /* Moderate speed */
+    animation: scrollStrip 35s linear infinite;
 }
 
 .strip-item {
@@ -150,10 +150,9 @@ a { text-decoration: none; color: inherit; }
 
 @keyframes scrollStrip {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } /* Moves half way (the length of original set) then resets */
+    100% { transform: translateX(-50%); }
 }
 
-/* Pause animation on hover so users can look at a photo */
 .strip-container-auto:hover .strip-track {
     animation-play-state: paused;
 }
@@ -209,7 +208,6 @@ a { text-decoration: none; color: inherit; }
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Side Cutouts (The "Ticket" Notches) */
 .service-ticket::before, .service-ticket::after {
     content: ''; position: absolute; top: 50%; width: 30px; height: 30px;
     background: var(--cream);
@@ -346,7 +344,6 @@ a { text-decoration: none; color: inherit; }
         margin-top: 10px; 
         gap: 15px; 
     }
-    /* FIXED: Smaller font + nowrap prevents Armenian words from breaking awkwardly */
     .top-bar-center .nav-link { 
         font-size: 0.65rem; 
         letter-spacing: 1px; 
@@ -360,7 +357,7 @@ a { text-decoration: none; color: inherit; }
 
     /* 3. HERO SECTION - Remove Film Frame for Mobile */
     .hero-section { 
-        padding: 80px 0 40px 0; /* Account for fixed top bar */
+        padding: 80px 0 40px 0;
         min-height: auto; 
         height: auto;
     }
@@ -369,7 +366,6 @@ a { text-decoration: none; color: inherit; }
         width: 95%; 
         border-radius: 8px;
     }
-    /* HIDE sprocket holes on mobile to maximize image area */
     .film-strip-frame::before, 
     .film-strip-frame::after { display: none; }
     .hero-image-wrapper { 
@@ -383,43 +379,49 @@ a { text-decoration: none; color: inherit; }
         max-width: 90%; 
     }
 
-    /* 4. PORTFOLIO STRIP - Switch to Vertical Stack on Mobile */
+    /* 4. PORTFOLIO STRIP - FIXED MOBILE VISIBILITY */
     .portfolio-section { padding: 60px 0; }
     
-    /* Hide the horizontal animation container entirely */
-    .strip-container-auto { display: none; }
+    /* Keep container but remove film styling */
+    .strip-container-auto { 
+        background: transparent !important;
+        border: none !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+    .strip-container-auto::before,
+    .strip-container-auto::after { display: none !important; }
     
-    /* Create a clean vertical grid for mobile portfolio */
-    .portfolio-header { margin-bottom: 30px; padding: 0 20px; }
-    
-    /* We inject a mobile-only grid via CSS using the existing strip items */
+    /* Transform track into vertical grid */
     .strip-track {
         display: grid !important;
-        grid-template-columns: 1fr;
-        gap: 15px;
-        width: 100%;
-        max-width: 500px;
-        margin: 0 auto;
-        padding: 0 20px;
-        animation: none !important; /* Stop the horizontal scroll */
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+        width: 100% !important;
+        max-width: 500px !important;
+        margin: 0 auto !important;
+        padding: 0 20px !important;
+        animation: none !important;
         transform: none !important;
     }
     
     .strip-item {
         width: 100% !important;
         height: auto !important;
-        aspect-ratio: 3/4; /* Perfect portrait ratio for phones */
-        border-radius: 8px;
-        overflow: hidden;
+        aspect-ratio: 3/4 !important;
+        border-radius: 8px !important;
+        overflow: hidden !important;
     }
     
     .strip-item img {
-        filter: grayscale(0%) !important; /* Show color by default on mobile */
-        object-fit: cover;
+        filter: grayscale(0%) !important;
+        object-fit: cover !important;
+        width: 100% !important;
+        height: 100% !important;
     }
     
-    /* Hide duplicate items on mobile to prevent double content */
-    .strip-item:nth-child(n+14) { display: none; }
+    /* Hide duplicate loop items on mobile */
+    .strip-item:nth-child(n+14) { display: none !important; }
 
     /* 5. ABOUT SECTION */
     .about-section { padding: 60px 20px; min-height: auto; }
@@ -431,7 +433,6 @@ a { text-decoration: none; color: inherit; }
     .services-section { padding: 60px 20px; }
     .ticket-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
     .service-ticket { padding: 30px 20px; }
-    /* Reduce notch size on mobile */
     .service-ticket::before, .service-ticket::after { width: 20px; height: 20px; }
 
     /* 7. FLOATING ELEMENTS */
